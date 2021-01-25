@@ -1,19 +1,16 @@
 <template>
-    <div id="app">
       <div class="login-form card">
         
-        <div class="img-container">
-            <img src="src/assets/Logo2.png" alt="Logo2"> 
-        </div>
-
-   
         <div v-if="exibirMensagemErro" class="alert alert-danger">
-            <strong>Erro!</strong> E-mail e/ou senha inválido(s).
+           <strong>Erro!</strong> E-mail e/ou senha inválido(s). 
         </div>
         
            
         <div class="row">
             <form class="col s12">
+              <div class="img-container">
+                <img class="img-login" src="https://png.pngtree.com/png-vector/20190225/ourlarge/pngtree-vector-avatar-icon-png-image_702436.jpg" alt="Logo2">
+             </div>
               <div class="row no-margin-bottom">
                 <div class="input-field col s12">
                   <input id="email" type="email" class="validate" v-model="email">
@@ -38,7 +35,7 @@
             </form>
           </div>
     </div>
-  </div>
+    
 </template>
 
 <script>
@@ -48,9 +45,10 @@ export default {
 </script>
 
 <style scoped>
-      #app{
-        background: #e3f2fd;
-        
+      
+      .img-login{
+        border-radius: 50%;
+        width: 12vw;
       }
 
       .login-form {
@@ -60,20 +58,8 @@ export default {
         padding: 40px;
         background: rgba(0,0,0,0.03);
       }
-
-      .img-container {
-        width: 150px;
-        height: 150px;
-        background: white;
-        border-radius: 150px 150px;
-        margin-left: 90px;
-      }
-
-      .img-container img {
-        width: 150px;
-      }
       .blog-title {
-        margin-left: 150px;
+        margin-left: 150vw;
 
       }
 
