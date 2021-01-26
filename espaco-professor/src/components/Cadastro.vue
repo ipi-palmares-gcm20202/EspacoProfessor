@@ -53,10 +53,6 @@ name: 'cadastro',
 
 <style scoped>
 
-#app{
- 
-}
-
 .login-form {
   border-radius: 50px 50px;
   width: 30vw;
