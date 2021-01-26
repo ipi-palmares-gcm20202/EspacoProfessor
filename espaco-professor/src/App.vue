@@ -13,8 +13,10 @@ export default {
   name: 'App',
   components: {
     
+    
    
-  }
+
+    Cadastro  }
 }
     
 </script>

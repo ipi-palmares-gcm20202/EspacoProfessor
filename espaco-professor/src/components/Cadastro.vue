@@ -1,15 +1,12 @@
 <template>
-<div id="app">
 <div class="login-form card">
-  
-  <div class="img-container">
-      <img src="https://i.ibb.co/k9vVKjM/adicionar-usuario-no-linux.jpg" alt="">
-  </div>
-
-  <p class="blog-title">Crie sua conta informando os seus dados nos campos abaixo.</p>
-
+   
   <div class="row">
       <form class="col s12">
+          <div class="img-container"> 
+           <img class="img-cadastro" src="https://i.ibb.co/k9vVKjM/adicionar-usuario-no-linux.jpg" alt="">
+           <p class="blog-title">Crie sua conta informando os seus dados nos campos abaixo.</p>
+          </div>
         <div class="row no-margin-bottom">
           <div class="input-field col s12">
               <input id="nome" type="text" class="validate" v-model="nome">
@@ -45,7 +42,7 @@
       </form>
     </div>
 </div>
-</div>
+
 </template>
 
 <script>
@@ -57,8 +54,7 @@ name: 'cadastro',
 <style scoped>
 
 #app{
-  background: #e3f2fd;
-  margin-top: 5%;
+ 
 }
 
 .login-form {
@@ -70,18 +66,9 @@ name: 'cadastro',
   
 }
 
-.img-container {
-  width: 150px;
-  height: 150px;
-  background: white;
-  border-radius: 150px 100px;
-  margin-left: 90px;
-}
-
-.img-container img {
-  width: 150px;
-  border-radius: 150px 150px;
-
+.img-cadastro{
+  width: 12vw;
+  margin-left: 22%;
 }
 
 .botao-cadastro {
