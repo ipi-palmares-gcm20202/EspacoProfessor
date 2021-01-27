@@ -27,7 +27,7 @@
 
                             <thead>
                                 <tr>
-                                    <th>Conteúdo</th>
+                                    <th>Material</th>
                                     <th>Disciplina</th>
                                     <th>Modalidade de Ensino</th>
                                     <th>Série/Ano</th>
@@ -37,12 +37,12 @@
                             
                             <tbody>
                                 <tr v-for="post in lista" v-bind:key="post">
-                                    <td>{{ post.conteudo }}</td>
+                                    <td>{{ post.material }}</td>
                                     <td>{{ post.disciplina }}</td>
                                     <td>{{ post.modalidadeEnsino }}</td>
                                     <td>{{ post.serieAno }}</td>
                                     <td>{{ post.autor }}</td>
-                                    <td> <a href="#"> Abrir postagem</a></td>
+                                    <td> <a href="#"> Abrir material</a></td>
                                 </tr>
 
                             </tbody>
@@ -68,10 +68,10 @@ export default {
         return {
             
                 lista : [
-                    {conteudo: 'Plano de aula', disciplina: 'História', modalidadeEnsino: 'Ensno Fundamental II', serieAno: '7º', autor: 'João Gomes'},
-                    {conteudo: 'Exercício', disciplina: 'Geografia', modalidadeEnsino: 'Ensino Fundamental I', serieAno: '4º', autor: 'Bruna Silva'},
-                    {conteudo: 'Dinâmica', disciplina: 'Português', modalidadeEnsino: 'Ensino Médio', serieAno: '3º', autor: 'Maria Dias'},
-                    {conteudo: 'Prova', disciplina: 'Biologia', modalidadeEnsino: 'Ensino Médio', serieAno: '1º', autor: 'Márcio Souza'},
+                    {material: 'Plano de aula', disciplina: 'História', modalidadeEnsino: 'Ensino Fundamental II', serieAno: '7º', autor: 'João Gomes'},
+                    {material: 'Exercício', disciplina: 'Geografia', modalidadeEnsino: 'Ensino Fundamental I', serieAno: '4º', autor: 'Bruna Silva'},
+                    {material: 'Dinâmica', disciplina: 'Português', modalidadeEnsino: 'Ensino Médio', serieAno: '3º', autor: 'Maria Dias'},
+                    {material: 'Prova', disciplina: 'Biologia', modalidadeEnsino: 'Ensino Médio', serieAno: '1º', autor: 'Márcio Souza'},
                 ]
         }
     }
@@ -84,7 +84,6 @@ export default {
             margin-top: 7vw;
             margin-left: 5vw;
             display: flex;
-            width: 100vw;
         }
 
         .content {
