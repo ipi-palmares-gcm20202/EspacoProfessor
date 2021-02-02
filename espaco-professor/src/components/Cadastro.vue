@@ -1,68 +1,73 @@
 <template>
-<div class="login-form card">
-   
-  <div class="row">
-      <form class="col s12">
-          <div class="img-container"> 
-           <img class="img-cadastro" src="https://i.ibb.co/k9vVKjM/adicionar-usuario-no-linux.jpg" alt="">
-           <p class="blog-title">Crie sua conta informando os seus dados nos campos abaixo.</p>
+<div>
+  <menu-superior/>
+  <div class="login-form card">
+    
+    <div class="row">
+        <form class="col s12">
+            <div class="img-container"> 
+            <img class="img-cadastro" src="https://i.ibb.co/k9vVKjM/adicionar-usuario-no-linux.jpg" alt="">
+            <p class="blog-title">Crie sua conta informando os seus dados nos campos abaixo.</p>
+            </div>
+          <div class="row no-margin-bottom">
+            <div class="input-field col s12">
+                <input id="nome" type="text" class="validate" v-model="nome">
+                <label for="nome"><i class="fa fa-clipboard"></i> Nome</label>
+            </div>
           </div>
-        <div class="row no-margin-bottom">
-          <div class="input-field col s12">
-              <input id="nome" type="text" class="validate" v-model="nome">
-              <label for="nome"><i class="fa fa-clipboard"></i> Nome</label>
-          </div>
-        </div>
 
-        <div class="row no-margin-bottom">
-          <div class="input-field col s12">
-            <input id="email" type="email" class="validate" v-model="email">
-            <label for="email"><i class="fa fa-envelope"></i> E-mail</label>
+          <div class="row no-margin-bottom">
+            <div class="input-field col s12">
+              <input id="email" type="email" class="validate" v-model="email">
+              <label for="email"><i class="fa fa-envelope"></i> E-mail</label>
+            </div>
           </div>
-        </div>
-        <div class="row no-margin-bottom">
-          <div class="input-field col s12">
-            <input id="password" type="password" class="validate" v-model="senha">
-            <label for="password"><i class="fa fa-key"></i> Senha</label>
+          <div class="row no-margin-bottom">
+            <div class="input-field col s12">
+              <input id="password" type="password" class="validate" v-model="senha">
+              <label for="password"><i class="fa fa-key"></i> Senha</label>
+            </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="input-field col s12">
-            <input id="confirmar-senha" type="password" class="validate" v-model="confirmacaoSenha">
-            <label for="confirmar-senha"><i class="fa fa-key"></i> Confirmação de senha</label>
-            <span v-if="password != confirmacaoSenha" class="erro-senha"><i class="fa fa-times"></i>As senhas informadas não são iguais!</span>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="confirmar-senha" type="password" class="validate" v-model="confirmacaoSenha">
+              <label for="confirmar-senha"><i class="fa fa-key"></i> Confirmação de senha</label>
+              <span v-if="senha != confirmacaoSenha" class="erro-senha"><i class="fa fa-times"></i>As senhas informadas não são iguais!</span>
+            </div>
           </div>
-        </div>
-        <div class="row">
-          <a :disabled="password != confirmacaoSenha" v-on:click="cadastrar" id="cadastrar" class="waves-effect waves-light btn btn-large blue darken-3 botao-cadastro">CADASTRAR</a>
-        </div>
-        <div class="row">
-            <a class="waves-effect waves-light btn btn-large botao-cadastro botao-novo-usuario">JÁ SOU CADASTRADO</a>
-        </div>
-      </form>
-    </div>
+          <div class="row">
+            <a :disabled="senha != confirmacaoSenha" v-on:click="cadastrar"  class="waves-effect waves-light btn btn-large blue darken-3 botao-cadastro">CADASTRAR</a>
+          </div>
+          <div class="row">
+              <a v-on:click= "TelaLogin" class="waves-effect waves-light btn btn-large botao-cadastro botao-novo-usuario">JÁ SOU CADASTRADO</a>
+          </div>
+        </form>
+      </div>
+  </div>
 </div>
 
 </template>
 
 <script>
-export default {
-name: 'cadastro',
+import MenuSuperior from './MenuSuperior.vue';
 
-  app:  ({
-      el: '.login-form card',
-      data: {
-        nome: '',
-        email: '',
-        senha: '',
-        confirmacaoSenha: ''
-      },
-      methods: {
-        cadastrar: function() {
-            alert('Dados cadastrados com sucesso!');
-        }
+export default {
+  components: { MenuSuperior },
+  name: 'Cadastro',
+
+  
+  methods:{
+    TelaLogin(){
+      this.$router.push({ name: 'Login' });
+    },
+    cadastrar() {
+      if (this.senha ==  this.confirmacaoSenha ){
+         alert("Logado com sucesso!");
+      } else {(this.email == "" && this.senha == "") 
+        alert("Preencha os campos para fazer login!");
       }
-})
+  }
+}
 }
 </script>
 
@@ -74,12 +79,13 @@ name: 'cadastro',
   margin-left: 35vw;
   padding: 40px;
   background: rgba(0,0,0,0.03);
-  
+  margin-top: 1%;
 }
 
 .img-cadastro{
   width: 12vw;
   margin-left: 22%;
+  border-radius: 150px ;
 }
 
 .botao-cadastro {

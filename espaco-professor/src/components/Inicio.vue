@@ -1,5 +1,6 @@
 <template>
-
+<div>
+  <menu-superior/>
   <div class="content">
     <div class="new-blog-content card">
       <h5>Materiais pedagógicos gratuitos</h5>
@@ -67,12 +68,14 @@
       </div>
     </div>
   </div>
-
+</div>
 </template>
 
 <script>
+import MenuSuperior from './MenuSuperior.vue';
 
 export default {
+  components: { MenuSuperior },
   name: "inicio",
       
   data() {
@@ -205,7 +208,7 @@ export default {
   width: 60%;
   margin-left: 20%;
   padding: 10px;
-  margin-top: 50px;
+  margin-top: 10px;
   padding-left: 40px;
 }
 
