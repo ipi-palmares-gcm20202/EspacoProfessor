@@ -32,7 +32,7 @@ export default {
 
 <style scoped>
  .bar-nav{
-            background-color:#5F9EA0;
+            background-color: white;
         }
 
         .img-logo{
