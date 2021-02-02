@@ -30,11 +30,11 @@
           <div class="input-field col s12">
             <input id="confirmar-senha" type="password" class="validate" v-model="confirmacaoSenha">
             <label for="confirmar-senha"><i class="fa fa-key"></i> Confirmação de senha</label>
-            <span v-if="senha != confirmacaoSenha" class="erro-senha"><i class="fa fa-times"></i>As senhas informadas não são iguais!</span>
+            <span v-if="password != confirmacaoSenha" class="erro-senha"><i class="fa fa-times"></i>As senhas informadas não são iguais!</span>
           </div>
         </div>
         <div class="row">
-          <a :disabled="senha != confirmacaoSenha" v-on:click="cadastrar" class="waves-effect waves-light btn btn-large blue darken-3 botao-cadastro">CADASTRAR</a>
+          <a :disabled="password != confirmacaoSenha" v-on:click="cadastrar" id="cadastrar" class="waves-effect waves-light btn btn-large blue darken-3 botao-cadastro">CADASTRAR</a>
         </div>
         <div class="row">
             <a class="waves-effect waves-light btn btn-large botao-cadastro botao-novo-usuario">JÁ SOU CADASTRADO</a>
@@ -48,6 +48,21 @@
 <script>
 export default {
 name: 'cadastro',
+
+  app:  ({
+      el: '.login-form card',
+      data: {
+        nome: '',
+        email: '',
+        senha: '',
+        confirmacaoSenha: ''
+      },
+      methods: {
+        cadastrar: function() {
+            alert('Dados cadastrados com sucesso!');
+        }
+      }
+})
 }
 </script>
 
