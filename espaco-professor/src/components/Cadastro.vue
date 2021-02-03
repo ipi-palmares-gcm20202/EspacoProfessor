@@ -36,7 +36,7 @@
             </div>
           </div>
           <div class="row">
-            <a :disabled="senha != confirmacaoSenha" v-on:click="cadastrar"  class="waves-effect waves-light btn btn-large blue darken-3 botao-cadastro">CADASTRAR</a>
+            <a v-on:click="cadastrar"  class=" waves-light btn btn-large blue darken-3 botao-cadastro">CADASTRAR</a>
           </div>
           <div class="row">
               <a v-on:click= "TelaLogin" class="waves-effect waves-light btn btn-large botao-cadastro botao-novo-usuario">JÁ SOU CADASTRADO</a>
@@ -55,17 +55,33 @@ export default {
   components: { MenuSuperior },
   name: 'Cadastro',
 
+  data(){
+    return{
+      nome: "",
+      email:"",
+      senha:"",
+      confirmacaoSenha:""
+    }
+  },
   
   methods:{
     TelaLogin(){
       this.$router.push({ name: 'Login' });
     },
-    cadastrar() {
-      if (this.senha ==  this.confirmacaoSenha ){
-         alert("Logado com sucesso!");
-      } else {(this.email == "" && this.senha == "") 
-        alert("Preencha os campos para fazer login!");
+    cadastrar: function() {
+      if(this.nome == "" || this.nome == "" ||this.senha == "" || this.confirmacaoSenha == "" || this.senha != this.confirmacaoSenha ){
+        alert('Preencha todos os campos com dados válidos!');
+      }else{
+      ({nome: this.nome, email: this.email, senha: this.senha, confirmacaoSenha: this.confirmacaoSenha })
+      alert('Dados cadastrados com sucesso!');
+      this.nome = "";
+      this.email = "";
+      this.senha = "";
+      this.confirmacaoSenha = "";
+      
       }
+       
+  
   }
 }
 }
