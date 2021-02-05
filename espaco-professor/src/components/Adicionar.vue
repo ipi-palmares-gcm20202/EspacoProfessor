@@ -65,7 +65,7 @@
               class="waves-effect waves-light btn blue darken-3 botao-cadastrar"
               ><i class="material-icons right">check</i>CADASTRAR</a
             >
-            <a class="waves-effect waves-light btn red botao-cancelar"
+            <a v-on:click="Cancelar" class="waves-effect waves-light btn red botao-cancelar"
               ><i class="material-icons right">close</i>CANCELAR</a
             >
           </div>
@@ -104,7 +104,10 @@ export default {
         alert("Cadastrado com sucesso!");
       }
     },
-  },
+    Cancelar(){
+      this.$router.push({ name: "InicioUsuario" });
+    },
+  }
 };
 </script>
 

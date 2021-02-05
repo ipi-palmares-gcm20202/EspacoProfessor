@@ -11,12 +11,12 @@ import MenuSuperior from '../components/MenuSuperior.vue'
 
 const routes = [
 
-  { path: '/',    name: 'Inicio',    component: Inicio},
-  { path: '/InicioUsuario',    name: 'InicioUsuario',    component: InicioUsuario},
-  { path: '/Login', name:'Login', component: Login},
-  { path: '/Cadastro',    name: 'Cadastro',    component: Cadastro},
-  { path: '/Adicionar',    name: 'Adicionar',    component: Adicionar},
-  { path: '/MenuSuperior',    name: 'MenuSuperior',    component: MenuSuperior},
+  { path: '/', name: 'Inicio', component: Inicio },
+  { path: '/InicioUsuario', name: 'InicioUsuario', component: InicioUsuario },
+  { path: '/Login', name: 'Login', component: Login },
+  { path: '/Cadastro', name: 'Cadastro', component: Cadastro },
+  { path: '/Adicionar', name: 'Adicionar', component: Adicionar },
+  { path: '/MenuSuperior', name: 'MenuSuperior', component: MenuSuperior },
 
 ]
 

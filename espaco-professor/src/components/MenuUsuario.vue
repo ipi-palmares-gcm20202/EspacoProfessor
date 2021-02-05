@@ -14,7 +14,9 @@
         </a>
         <ul class="right hide-on-med-and-down">
           <li>
-            <a href="#"><i class="fa fa-user"></i> Jefferson Henrique</a>
+            <a href="#" v-on:click="TelaInicioUsuario"
+              ><i class="fa fa-user"></i> Jefferson Henrique</a
+            >
           </li>
           <li>
             <a href="#" v-on:click="AdicionarMaterial"
@@ -44,6 +46,9 @@ export default {
     },
     Sair() {
       this.$router.push({ name: "Inicio" });
+    },
+    TelaInicioUsuario() {
+      this.$router.push({ name: "InicioUsuario" });
     },
   },
 };
