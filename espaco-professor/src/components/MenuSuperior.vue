@@ -15,7 +15,7 @@
         <li><a v-on:click="TelaInicio">Início</a></li>
         <li><a v-on:click="TelaLogin">Login</a></li>
         <li><a v-on:click="TelaCadastro">Cadastrar</a></li>
-        <li><a href="#"></a></li>
+       
       </ul>
     </div>
   </nav>
@@ -24,6 +24,7 @@
 <script>
 export default {
   name: "menu-superior",
+
   methods: {
     TelaCadastro() {
       this.$router.push({ name: "Cadastro" });

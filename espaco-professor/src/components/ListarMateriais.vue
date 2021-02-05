@@ -4,7 +4,6 @@
     <div class="content">
       <div class="new-blog-content">
         <h5>Materiais postados</h5>
-        
 
         <div class="row">
           <div class="filtros-card">
@@ -34,7 +33,7 @@
               <div class="input-field col s2">
                 <a
                   v-on:click="buscar"
-                  class="waves-effect waves-light btn blue botao-filtrar"
+                  class=" waves-light btn blue botao-filtrar"
                   ><i class="material-icons left">search</i>Buscar</a
                 >
               </div>
@@ -44,7 +43,6 @@
 
         <div v-if="listaFiltrados.length > 0" class="row">
           <div
-            
             v-for="post in listaFiltrados"
             v-bind:key="post"
             class="col s12 m4"
@@ -68,18 +66,17 @@
           </div>
         </div>
       </div>
-
-           
     </div>
+    
   </div>
 </template>
 
 <script>
-import MenuUsuario from './MenuUsuario.vue';
+import MenuUsuario from "./MenuUsuario.vue";
 
 
 export default {
-  components: { MenuUsuario },
+  components: { MenuUsuario, },
   name: "listar-materiais",
 
   data() {
@@ -204,56 +201,51 @@ export default {
 
   methods: {
     buscar() {
-       
-        this.listaFiltrados = this.lista.filter((post) =>
-          post.material
-            .toLowerCase()
-            .includes(this.filtroMaterial.toLowerCase())
-        );
+      this.listaFiltrados = this.lista.filter((post) =>
+        post.material.toLowerCase().includes(this.filtroMaterial.toLowerCase())
+      );
 
-        this.listaFiltrados = this.listaFiltrados.filter((post) =>
-          post.disciplina
-            .toLowerCase()
-            .includes(this.filtroDisciplina.toLowerCase())
-        );
-      
+      this.listaFiltrados = this.listaFiltrados.filter((post) =>
+        post.disciplina
+          .toLowerCase()
+          .includes(this.filtroDisciplina.toLowerCase())
+      );
     },
     remover(id) {
-            this.lista = this.lista.filter(post => post.id != id);
-            this.buscar();
+      this.lista = this.lista.filter((post) => post.id != id);
+      this.buscar();
+    },
   },
-}
-}
+};
 </script>
 
 <style scoped>
-
-.new-blog-content{
+.new-blog-content {
   background-color: white;
 }
 
-.container-img{
+.container-img {
   background-color: #e0c6e3;
   margin-left: 0vw;
   width: 100%;
 }
 
-.container-img h3{
+.container-img h3 {
   text-align: center;
 }
 
-.img-materiais{
+.img-materiais {
   padding-top: 3vw;
   margin-top: 3vw;
   margin-left: 30vw;
 }
 
-.img-materiais2{
+.img-materiais2 {
   margin-top: 2vw;
   margin-left: 7vw;
 }
 
-.img-materiais img{
+.img-materiais img {
   margin-left: 2vw;
 }
 

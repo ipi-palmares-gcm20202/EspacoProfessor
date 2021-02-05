@@ -35,9 +35,9 @@
               </div>
 
               <div class="input-field col s2">
-                <a
+                <a href="#"
                   v-on:click="buscar"
-                  class="waves-effect waves-light btn blue botao-filtrar"
+                  class=" waves-light btn blue botao-filtrar"
                   ><i class="material-icons left">search</i>Buscar</a
                 >
               </div>
@@ -71,24 +71,22 @@
       </div>
 
       <div class="container-img">
-        <br><br>
+        <br /><br />
         <h3>Materiais e disciplinas</h3>
         <div class="img-materiais">
-        <img src="../assets/img-material-portugues.png" alt="" />
+          <img src="../assets/img-material-portugues.png" alt="" />
 
-        <img src="../assets/img-material-geografia.png" alt="" />
+          <img src="../assets/img-material-geografia.png" alt="" />
 
-        <img src="../assets/img-material-historia.png" alt="" />
+          <img src="../assets/img-material-historia.png" alt="" />
 
-        <div class="img-materiais2">
-          <img src="../assets/img-material-ingles.png" alt="" />
+          <div class="img-materiais2">
+            <img src="../assets/img-material-ingles.png" alt="" />
 
-          <img src="../assets/img-material-matematica.png" alt="" />
+            <img src="../assets/img-material-matematica.png" alt="" />
+          </div>
         </div>
       </div>
-      </div>
-
-      
     </div>
   </div>
 </template>
@@ -97,7 +95,7 @@
 import MenuSuperior from "./MenuSuperior.vue";
 
 export default {
-  components: { MenuSuperior },
+  components: { MenuSuperior,  },
   name: "inicio",
 
   data() {
@@ -232,33 +230,32 @@ export default {
 </script>
 
 <style scoped>
-
-.new-blog-content{
+.new-blog-content {
   background-color: white;
 }
 
-.container-img{
+.container-img {
   background-color: #e0c6e3;
   margin-left: 0vw;
   width: 100%;
 }
 
-.container-img h3{
+.container-img h3 {
   text-align: center;
 }
 
-.img-materiais{
+.img-materiais {
   padding-top: 3vw;
   margin-top: 3vw;
   margin-left: 30vw;
 }
 
-.img-materiais2{
+.img-materiais2 {
   margin-top: 2vw;
   margin-left: 7vw;
 }
 
-.img-materiais img{
+.img-materiais img {
   margin-left: 2vw;
 }
 
