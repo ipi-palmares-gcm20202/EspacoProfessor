@@ -2,31 +2,47 @@
   <div>
     <menu-usuario />
     <div class="new-blog-content card">
-      <h5>
-        <i class="fa fa-plus-circle" ></i> Adicionar Material 
-      </h5>
+      <h5><i class="fa fa-plus-circle"></i> Adicionar Material</h5>
       <div class="row">
         <form class="col s12">
           <div class="row">
             <div class="input-field col s12">
-              <input id="title" type="text" class="validate" v-model="titulo" />
-              <label for="title">Título</label>
+              <input id="tipo" type="text" class="validate" v-model="tipo" />
+              <label for="tipo">Tipo de material</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input
+                id="disciplina"
+                type="text"
+                class="validate"
+                v-model="disciplina"
+              />
+              <label for="disciplina">Disciplina</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input
+                id="modalidade"
+                type="text"
+                class="validate"
+                v-model="modalidade"
+              />
+              <label for="modalidade">Modalidade</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="ano" type="text" class="validate" v-model="ano" />
+              <label for="ano">Ano</label>
             </div>
           </div>
           <div class="row">
             <div class="input-field col s12">
               <input id="autor" type="text" class="validate" v-model="autor" />
-              <label for="autor">Tipo</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="input-field col s12">
-              <textarea
-                id="description"
-                class="materialize-textarea"
-                v-model="descricao"
-              ></textarea>
-              <label for="description">Descrição</label>
+              <label for="autor">Professor(a)-Autor(a)</label>
             </div>
           </div>
           <div class="row">
@@ -36,8 +52,9 @@
                   <textarea
                     id="textarea1"
                     class="materialize-textarea"
+                    v-model="descricao"
                   ></textarea>
-                  <label for="textarea1">Conteudo</label>
+                  <label for="textarea1">Sobre este material</label>
                 </div>
               </div>
             </form>
@@ -55,15 +72,39 @@
         </form>
       </div>
     </div>
-   
   </div>
 </template>
 
 <script>
-
 import MenuUsuario from "./MenuUsuario.vue";
 export default {
-  components: { MenuUsuario,},
+  components: { MenuUsuario },
+  data() {
+    return {
+      tipo: "",
+      disciplina: "",
+      modalidade: "",
+      ano: "",
+      autor: "",
+      descricao: "",
+    };
+  },
+  methods: {
+    cadastrarBlog() {
+      if (
+        this.tipo == "" ||
+        this.disciplina == "" ||
+        this.modalidade == "" ||
+        this.ano == "" ||
+        this.autor == "" ||
+        this.descricao == ""
+      ) {
+        alert("Todos os campos devem ser preenchidos!");
+      } else {
+        alert("Cadastrado com sucesso!");
+      }
+    },
+  },
 };
 </script>
 
@@ -88,8 +129,8 @@ export default {
   padding-left: 40px;
   background: white;
 }
-.new-blog-content  {
-  color: #1565c0;
+.new-blog-content {
+  color: #000000;
   text-align: c;
 }
 .botao-search {
