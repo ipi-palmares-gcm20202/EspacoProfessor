@@ -67,7 +67,7 @@ export default {
       this.$router.push({ name: "Cadastro" });
     },
     login() {
-      if (this.email == "je@gmail.com" && this.senha == "123456") {
+      if (this.email == "espaco-professor@gmail.com" && this.senha == "1922") {
         this.$router.push({ name: "InicioUsuario" });
       } else {
         (this.email == "" && this.senha == "") ||

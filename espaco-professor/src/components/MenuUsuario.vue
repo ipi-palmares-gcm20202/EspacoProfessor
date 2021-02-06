@@ -7,7 +7,7 @@
             class="img-logo"
             src="https://i.ibb.co/LQ5myXf/logo-espaco-professor.png"
             alt=""
-          />
+          >
         </a>
         <a href="#" data-activates="menu-mobile" class="button-collapse">
           <i class="material-icons">menu</i>
@@ -15,7 +15,7 @@
         <ul class="right hide-on-med-and-down">
           <li>
             <a href="#" v-on:click="TelaInicioUsuario"
-              ><i class="fa fa-user"></i> Jefferson Henrique</a
+              ><i class="fa fa-user"></i> Espaço Professor</a
             >
           </li>
           <li>
@@ -70,6 +70,9 @@ export default {
 }
 
 ul li a {
+  color: black;
+}
+.button-collapse {
   color: black;
 }
 </style>

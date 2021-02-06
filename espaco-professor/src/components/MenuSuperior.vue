@@ -57,4 +57,7 @@ export default {
 ul li a {
   color: black;
 }
+.button-collapse {
+  color: black;
+}
 </style>

@@ -132,10 +132,14 @@ export default {
   padding-left: 40px;
   background: white;
 }
+.new-blog-content h5 i {
+  color: #375aca;
+;
+  
+}
 .new-blog-content {
   color: #000000;
-  text-align: c;
-}
+  }
 .botao-search {
   border-radius: 150px;
   margin-left: 40%;
@@ -166,7 +170,7 @@ export default {
 
 .botao-cancelar {
   border-radius: 150px;
-  margin-left: 5%;
+  margin-left: 2%;
 }
 .botao-cadastrar {
   border-radius: 150px;
