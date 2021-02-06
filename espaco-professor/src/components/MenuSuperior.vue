@@ -41,7 +41,7 @@ export default {
 
 <style scoped>
  .bar-nav{
-            background-color:#5F9EA0;
+            background-color:#e6e6fa;
         }
         .img-logo{
             width: 150px;
