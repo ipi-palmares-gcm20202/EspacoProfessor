@@ -7,12 +7,28 @@
             class="img-logo"
             src="https://i.ibb.co/LQ5myXf/logo-espaco-professor.png"
             alt=""
-          >
+          />
         </a>
         <a href="#" data-activates="menu-mobile" class="button-collapse">
           <i class="material-icons">menu</i>
         </a>
         <ul class="right hide-on-med-and-down">
+          <li>
+            <a href="#" v-on:click="TelaInicioUsuario"
+              ><i class="fa fa-user"></i> Espaço Professor</a
+            >
+          </li>
+          <li>
+            <a href="#" v-on:click="AdicionarMaterial"
+              ><i class="fa fa-plus-circle"></i> Adicionar Material</a
+            >
+          </li>
+          <li><a href="#" v-on:click="Sair"> Sair</a></li>
+          <li>
+            <a href="#"><i class="fa fa-search"></i></a>
+          </li>
+        </ul>
+        <ul class="sidenav" id="mobile-demo">
           <li>
             <a href="#" v-on:click="TelaInicioUsuario"
               ><i class="fa fa-user"></i> Espaço Professor</a
